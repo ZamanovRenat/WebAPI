@@ -156,7 +156,6 @@ namespace WebAPI.Controllers
         {
             try
             {
-                //Возврат фото сотрудника
                 var httpRequest = HttpContext.Current.Request;
                 var postedFile = httpRequest.Files[0];
                 string filename = postedFile.FileName;
@@ -168,7 +167,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception)
             {
-                // Возврат фото сотрудника по-умолчанию
+
                 return "anonymous.png";
             }
         }
